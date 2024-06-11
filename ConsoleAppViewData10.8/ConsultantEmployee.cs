@@ -11,7 +11,7 @@ namespace ConsoleAppViewData10._8
 {
     internal class ConsultantEmployee : IViewData, IChangingDataConsultant, IChangeControl
     {
-        public ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber)
+        public ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber, string who)
         {
             var clients = list.Find(x => x.Id == idClients);
             if (clients == null)
@@ -20,17 +20,25 @@ namespace ConsoleAppViewData10._8
                 return null;
             }
             clients.PhoneNumber = phoneNumber;
-            InfoControlChange("Телефон", "Update", "Консультант");
+            
+            InfoControlChange("Телефон", "Update", who);
             Console.WriteLine($"Номер телефона у клиента {idClients} обновлен.");
             return clients;
         }
 
 
-        public void OutputData(List<ClientData> list)
+        public void OutputData(List<ClientData> list, string who)
         {
             foreach (ClientData item in list)
             {
-                Console.WriteLine($"{item.Id} Фамилия: {item.Surname} Имя: {item.Name} Отчество: {item.Patronymic} Номер телефона: {item.PhoneNumber} Паспортные данные: ***********");
+                if (who == "Консультант")
+                {
+                    Console.WriteLine($"{item.Id} Фамилия: {item.Surname} Имя: {item.Name} Отчество: {item.Patronymic} Номер телефона: {item.PhoneNumber} Паспортные данные: ***********");
+                }
+                else
+                {
+                    Console.WriteLine($"{item.Id} Фамилия: {item.Surname} Имя: {item.Name} Отчество: {item.Patronymic} Номер телефона: {item.PhoneNumber} Паспортные данные: {item.PassportID}");
+                }
             }
         }
 

@@ -8,6 +8,6 @@ namespace ConsoleAppViewData10._8.Interface
 {
     internal interface IChangingDataConsultant
     {
-        ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber);
+        ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber, string who);
     }
 }

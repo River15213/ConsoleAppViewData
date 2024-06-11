@@ -8,7 +8,7 @@ namespace ConsoleAppViewData10._8.Interface
 {
     internal interface IViewData
     {
-        void OutputData(List<ClientData> list);
+        void OutputData(List<ClientData> list, string who);
 
     }
 }
