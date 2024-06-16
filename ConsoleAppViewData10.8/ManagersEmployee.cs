@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace ConsoleAppViewData10._8
 {
-    internal class ManagersEmployee : ConsultantEmployee, IViewData, IChangingDataManagers, IChangeControl
+    public class ManagersEmployee : ConsultantEmployee, IViewData, IChangingDataManagers, IChangeControl
     {
         public ClientData ChangePassportId(List<ClientData> list, int idClients, int passportId)
         {
@@ -40,5 +40,32 @@ namespace ConsoleAppViewData10._8
             return clients;
         }
 
+        public override ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber)
+        {
+            var clients = list.Find(x => x.Id == idClients);
+            if (clients == null)
+            {
+                Console.WriteLine($"Такого клиента нет");
+                return null;
+            }
+            clients.PhoneNumber = phoneNumber;
+
+            InfoControlChange("Телефон", "Update", "Менеджер");
+            Console.WriteLine($"Номер телефона у клиента {idClients} обновлен.");
+            return clients;
+        }
+
+        public override void OutputData(List<ClientData> list)
+        {
+            foreach (ClientData item in list)
+            {
+                Console.WriteLine($"{item.Id} Фамилия: {item.Surname} Имя: {item.Name} Отчество: {item.Patronymic} Номер телефона: {item.PhoneNumber} Паспортные данные: {item.PassportID}");
+            }
+        }
+
+        public override ChangeControlClientBD InfoControlChange(string dataChange, string typeChange, string whoChange)
+        {
+            return base.InfoControlChange(dataChange, typeChange, whoChange);
+        }
     }
 }

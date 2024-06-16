@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppViewData10._8
 {
-    internal class ClientData
+    public class ClientData
     {
         private static int idcouter = 0;
         public int Id { get; private set; }

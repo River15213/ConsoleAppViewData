@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppViewData10._8
 {
-    internal class ChangeControlClientBD
+    public class ChangeControlClientBD
     {
         public DateTime DateChange { get; set; }
         public string DataChange { get; set; }

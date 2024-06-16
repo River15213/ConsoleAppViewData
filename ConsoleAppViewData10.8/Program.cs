@@ -46,7 +46,7 @@
                 case 1:
                     Console.WriteLine("Информацио о клиентах: ");
                     Console.WriteLine();
-                    consultantEmployee.OutputData(listClients, "Консультант");
+                    consultantEmployee.OutputData(listClients);
                     break;
                 case 2:
                     Console.WriteLine($"Введите Ид клиента.");
@@ -61,7 +61,7 @@
                     }
                     else
                     {
-                        var clientsChande = consultantEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient, "Консультант");
+                        var clientsChande = consultantEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient);
                         if (clientsChande != null)
                         {
                             recordingAndReadFile.UpdateFileClient(listClients);
@@ -84,7 +84,7 @@
                 case 1:
                     Console.WriteLine("Информацио о клиентах: ");
                     Console.WriteLine();
-                    managersEmployee.OutputData(listClients, "Менеджер");
+                    managersEmployee.OutputData(listClients);
                     break;
                 case 2:
                     Console.WriteLine($"Введите Ид клиента.");
@@ -99,7 +99,7 @@
                     }
                     else
                     {
-                        var clientsChandePhone = consultantEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient, "Менеджер");
+                        var clientsChandePhone = managersEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient);
                         if (clientsChandePhone != null)
                         {
                             recordingAndReadFile.UpdateFileClient(listClients);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppViewData10._8
 {
-    internal class RecordingAndReadFile
+    public class RecordingAndReadFile
     {
         static private ClientData ClientOne = new ClientData("Иванов", "Иван", "Иванович", "+7(918)345-12-23", 232345544);
         static private ClientData ClientTwo = new ClientData("Петров", "Петр", "Петрович", "+7(928)123-15-83", 127929881);
