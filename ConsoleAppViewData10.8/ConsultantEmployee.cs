@@ -11,7 +11,7 @@ namespace ConsoleAppViewData10._8
 {
     public class ConsultantEmployee : IViewData, IChangingDataConsultant, IChangeControl
     {
-        public virtual ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber)
+        public virtual ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber, string who)
         {
             var clients = list.Find(x => x.Id == idClients);
             if (clients == null)
@@ -21,7 +21,7 @@ namespace ConsoleAppViewData10._8
             }
             clients.PhoneNumber = phoneNumber;
             
-            InfoControlChange("Телефон", "Update", "Консультант");
+            InfoControlChange("Телефон", "Update", who);
             Console.WriteLine($"Номер телефона у клиента {idClients} обновлен.");
             return clients;
         }

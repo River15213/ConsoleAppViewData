@@ -40,19 +40,9 @@ namespace ConsoleAppViewData10._8
             return clients;
         }
 
-        public override ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber)
+        public override ClientData ChangePhoneNumber(List<ClientData> list, int idClients, string phoneNumber, string who)
         {
-            var clients = list.Find(x => x.Id == idClients);
-            if (clients == null)
-            {
-                Console.WriteLine($"Такого клиента нет");
-                return null;
-            }
-            clients.PhoneNumber = phoneNumber;
-
-            InfoControlChange("Телефон", "Update", "Менеджер");
-            Console.WriteLine($"Номер телефона у клиента {idClients} обновлен.");
-            return clients;
+            return base.ChangePhoneNumber(list, idClients, phoneNumber, who);
         }
 
         public override void OutputData(List<ClientData> list)

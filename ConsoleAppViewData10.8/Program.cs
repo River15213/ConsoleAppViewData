@@ -61,7 +61,7 @@
                     }
                     else
                     {
-                        var clientsChande = consultantEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient);
+                        var clientsChande = consultantEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient, "Консультант");
                         if (clientsChande != null)
                         {
                             recordingAndReadFile.UpdateFileClient(listClients);
@@ -99,7 +99,7 @@
                     }
                     else
                     {
-                        var clientsChandePhone = managersEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient);
+                        var clientsChandePhone = managersEmployee.ChangePhoneNumber(listClients, inputIdClient, inputNewPhoneNumberClient, "Менеджер");
                         if (clientsChandePhone != null)
                         {
                             recordingAndReadFile.UpdateFileClient(listClients);
