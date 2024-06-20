@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppViewData11._7.Repositori;
 
 namespace WpfAppViewData11._7
 {
@@ -21,11 +22,44 @@ namespace WpfAppViewData11._7
     /// </summary>
     public partial class Page1ConsultantEmployee : Page
     {
-        ConsultantEmployee consultantEmployee = new ConsultantEmployee();
+        RecordingAndReadFile recordingAndReadFile = new RecordingAndReadFile();
+        ConsultantEmployeeWPF consultantEmployeeWPF = new ConsultantEmployeeWPF();
+        private List<ClientData> data;
+
         public Page1ConsultantEmployee()
         {
             
             InitializeComponent();
+            recordingAndReadFile.WreateFile();
+            data = recordingAndReadFile.ReadFile();
+
+            foreach (var item in data)
+            {
+                item.PassportID = -1;
+            }
+            dataGridConsultant.ItemsSource = data;
+        }
+
+        private void ChangePhoneNumber_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedEmployee = dataGridConsultant.SelectedItem as ClientData;
+            if (selectedEmployee != null)
+            {
+                var IdEmployee = selectedEmployee.Id;
+                EditPhoneNumber editPhoneNumber = new EditPhoneNumber();
+                if (editPhoneNumber.ShowDialog() == true)
+                {
+                    consultantEmployeeWPF.ChangePhoneNumber(data, IdEmployee, editPhoneNumber.newPhoneNumber, "Консультант");
+                    recordingAndReadFile.UpdateFileClient(data);
+                    dataGridConsultant.Items.Refresh();
+                    
+                }   
+
+            }
+            else
+            {
+                MessageBox.Show("Выберите клиента для изменение данных.");
+            }
         }
     }
 }

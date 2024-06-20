@@ -10,7 +10,7 @@ namespace ConsoleAppViewData10._8
 {
     public class ManagersEmployee : ConsultantEmployee, IViewData, IChangingDataManagers, IChangeControl
     {
-        public ClientData ChangePassportId(List<ClientData> list, int idClients, int passportId)
+        public virtual ClientData ChangePassportId(List<ClientData> list, int idClients, int passportId)
         {
             var clients = list.Find(x => x.Id == idClients);
             if (clients == null)
@@ -24,7 +24,7 @@ namespace ConsoleAppViewData10._8
             return clients;
         }
 
-        public ClientData ChangeFullName(List<ClientData> list, int idClients, string surname, string name, string patronymic)
+        public virtual ClientData ChangeFullName(List<ClientData> list, int idClients, string surname, string name, string patronymic)
         {
             var clients = list.Find(x => x.Id == idClients);
             if (clients == null)

@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label Content="Какая у вас должность?" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Height="50" Width="276" FontSize="24"/>
+        <Button x:Name="ButtonConsultant" Content="Консультант" HorizontalAlignment="Left" Margin="177,155,0,0" VerticalAlignment="Top" FontSize="21" Click="ButtonConsultant_Click"/>
+        <Button x:Name="ButtonManagers" Content="Менеджер" HorizontalAlignment="Left" Margin="535,155,0,0" VerticalAlignment="Top" FontSize="21" Click="ButtonManagers_Click"/>
 
     </Grid>
 </Window>

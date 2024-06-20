@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfAppViewData11._7.EditPassportID"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppViewData11._7"
+        mc:Ignorable="d"
+        Title="EditPassportID" Height="150" Width="300">
+    <Grid>
+        <Label Content="Введите паспортные данные" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <TextBox x:Name="newPasportIDTextBox" HorizontalAlignment="Center" Margin="0,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200"  FontSize="12"/>
+        <Button x:Name="ButtonSaveDataPasportId" Content="Сохранить" HorizontalAlignment="Left" Margin="167,81,0,0" VerticalAlignment="Top" FontSize="12" Width="83" Click="ButtonSaveDataPasportId_Click" Height="23"/>
+
+    </Grid>
+</Window>

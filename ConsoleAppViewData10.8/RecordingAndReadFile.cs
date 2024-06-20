@@ -12,7 +12,7 @@ namespace ConsoleAppViewData10._8
         static private ClientData ClientTwo = new ClientData("Петров", "Петр", "Петрович", "+7(928)123-15-83", 127929881);
         static private ClientData ClientThree = new ClientData("Мумов", "Артур", "Артурович", "+7(918)666-10-03", 000144912);
 
-        internal void WreateFile()
+        public void WreateFile()
         {
             using (StreamWriter sw = new StreamWriter("DataClients.txt"))
             {
@@ -22,8 +22,15 @@ namespace ConsoleAppViewData10._8
             }
             Console.WriteLine("Запись выполнена");
         }
+        public void WriteOneLine(ClientData clientData)
+        {
+            using(StreamWriter sw = new StreamWriter("DataClients.txt"))
+            {
+                sw.WriteLine(clientData.ToString());
+            }
+        }
 
-        internal void UpdateFileClient(List<ClientData> clients)
+        public void UpdateFileClient(List<ClientData> clients)
         {
             using (StreamWriter sw = new StreamWriter("DataClients.txt"))
             {
@@ -36,7 +43,7 @@ namespace ConsoleAppViewData10._8
             Console.WriteLine("Запись клиента выполнена");
         }
 
-        internal List<ClientData> ReadFile()
+        public List<ClientData> ReadFile()
         {
             List<ClientData> list = new List<ClientData>();
             using(StreamReader sr = new StreamReader("DataClients.txt"))

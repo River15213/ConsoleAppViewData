@@ -8,7 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1ConsultantEmployee">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <DataGrid x:Name="dataGridConsultant" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="True" SelectionMode="Single"/>
+        <Button x:Name="ChangePhoneNumber" Content="Изменить номер телефона" HorizontalAlignment="Left" Margin="490,262,0,0" VerticalAlignment="Top" FontSize="22" Click="ChangePhoneNumber_Click"/>
+
     </Grid>
 </Page>

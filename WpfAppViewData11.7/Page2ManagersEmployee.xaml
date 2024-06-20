@@ -8,7 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page2ManagersEmployee">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <DataGrid x:Name="dataGridManagers" AutoGenerateColumns="True" IsReadOnly="True" SelectionMode="Single" Margin="0,0,400,0"/>
+        <Button x:Name="ChangePhoneNumber" Content="Изменить номер телефона" HorizontalAlignment="Left" Margin="487,0,0,0" VerticalAlignment="Center" FontSize="22" Click="ChangePhoneNumber_Click"/>
+        <Button x:Name="ChangeFullName" Content="Изменение ФИО" HorizontalAlignment="Left" Margin="589,333,0,0" VerticalAlignment="Top" FontSize="22" Click="ChangeFullName_Click"/>
+        <Button x:Name="ChangePassportID" Content="Изменение паспортных данных" HorizontalAlignment="Left" Margin="438,151,0,0" VerticalAlignment="Top" FontSize="22" Click="ChangePassportID_Click"/>
+        <Button x:Name="AddClientButton" Content="Добавление клиента" HorizontalAlignment="Left" Margin="549,272,0,0" VerticalAlignment="Top" FontSize="22" Click="AddClientButton_Click"/>
+
     </Grid>
 </Page>

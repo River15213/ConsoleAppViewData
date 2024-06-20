@@ -20,5 +20,17 @@ namespace WpfAppViewData11._7
         {
             InitializeComponent();
         }
+
+        private void ButtonConsultant_Click(object sender, RoutedEventArgs e)
+        {
+            Page1ConsultantEmployee page1ConsultantEmployee = new Page1ConsultantEmployee();
+            this.Content = page1ConsultantEmployee;
+        }
+
+        private void ButtonManagers_Click(object sender, RoutedEventArgs e)
+        {
+            Page2ManagersEmployee page2ManagersEmployee = new Page2ManagersEmployee();
+            this.Content = page2ManagersEmployee;
+        }
     }
 }
