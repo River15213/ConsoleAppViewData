@@ -8,8 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppViewData11._7.PagesMain;
 
-namespace WpfAppViewData11._7
+namespace WpfAppViewData11._7.PagesMain
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

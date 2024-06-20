@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfAppViewData11._7.Repositori
+namespace WpfAppViewData11._7.Services
 {
     internal class ManagersEmployeeWPF : ManagersEmployee
     {

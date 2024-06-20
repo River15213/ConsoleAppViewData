@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfAppViewData11._7
+namespace WpfAppViewData11._7.PagesMain.EditDataWindow
 {
     /// <summary>
     /// Логика взаимодействия для EditPhoneNumber.xaml

@@ -13,9 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfAppViewData11._7.Repositori;
+using WpfAppViewData11._7.PagesMain.EditDataWindow;
+using WpfAppViewData11._7.Services;
 
-namespace WpfAppViewData11._7
+namespace WpfAppViewData11._7.PagesMain
 {
     /// <summary>
     /// Логика взаимодействия для Page1ConsultantEmployee.xaml
